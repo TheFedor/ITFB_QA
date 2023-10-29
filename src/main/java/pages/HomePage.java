@@ -1,5 +1,6 @@
 package pages;
 
+import io.qameta.allure.Allure;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,11 +20,13 @@ public class HomePage {
 
     @Step("1-Перейти на https://demoqa.com/")
     public void enterToSite(){
+        Allure.step("1-Перейти на https://demoqa.com/");
         driver.get("https://demoqa.com/");
     }
 
-    @Step("2-Нажать на \"Elements\"")
+    @Step("2-Нажать на 'Elements'")
     public void clickOnElementsBox(){
+        Allure.step("2-Нажать на \"Elements\"");
         elementsBox.click();
     }
 

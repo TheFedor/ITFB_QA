@@ -42,11 +42,13 @@ public class TextBoxPage {
 
     @Step("3-Нажать на элемент \"Text box\"")
     public void clickOnTextBoxElement() {
+        Allure.step("3-Нажать на элемент \"Text box\"");
         textBoxElement.click();
     }
 
     @Step("4-Заполнить поля:Full Name, Email, Current Address, Permanent Address")
     public void fillingInFieldsForTextBox(String fullName, String email, String currentAddress, String permanentAddress) {
+        Allure.step("4-Заполнить поля:Full Name, Email, Current Address, Permanent Address");
         fullNameInput.sendKeys(fullName);
         emailInput.sendKeys(email);
         currentAddressTextarea.sendKeys(currentAddress);
@@ -55,11 +57,13 @@ public class TextBoxPage {
 
     @Step("5-Нажать на кнопку \"Submit\"")
     public void clickOnButtonSubmit() {
+        Allure.step("5-Нажать на кнопку \"Submit\"");
         submitButton.click();
     }
 
     @Step("6-Проверить, что данные в блоке сохранены корректно")
     public void checkingCorrectnessOfOutput() {
+        Allure.step("6-Проверить, что данные в блоке сохранены корректно");
         try {
             Assert.assertEquals(nameInOutput.getText(), "Name:Фёдор");
         } catch (AssertionError e) {

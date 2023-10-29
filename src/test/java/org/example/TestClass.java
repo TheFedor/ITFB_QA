@@ -1,7 +1,9 @@
 package org.example;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.qameta.allure.Allure;
 import io.qameta.allure.Description;
+import io.qameta.allure.Step;
 import io.qameta.allure.Story;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -72,6 +74,7 @@ public class TestClass {
         alertsPage.checkSelectedStatus();
         alertsPage.promtButtonClick();
         alertsPage.fillingInAlert();
+        alertsPage.checkTextEnteredAfterAlert();
     }
 
 }

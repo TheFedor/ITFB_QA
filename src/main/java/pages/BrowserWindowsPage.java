@@ -1,5 +1,6 @@
 package pages;
 
+import io.qameta.allure.Allure;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -33,17 +34,21 @@ public class BrowserWindowsPage {
 
     @Step("15-Нажать на Browser Windows")
     public void clickOnBrowserWindows() {
+        Allure.step("15-Нажать на Browser Windows");
         wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("div[class='element-list collapse show']")));
         browserWindows.click();
     }
 
     @Step("16-Нажать на кнопку New Tab")
     public void newTabButtonClick() {
+        Allure.step("16-Нажать на кнопку New Tab");
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("button[id='tabButton']")));
         newTabButton.click();
     }
 
     @Step("17-Закрыть новую вкладку")
     public void closeNewTab() {
+        Allure.step("17-Закрыть новую вкладку");
         //Находим дескриптор новой вкладки
         String newWindow = "";
         for (String window : driver.getWindowHandles())
@@ -56,11 +61,13 @@ public class BrowserWindowsPage {
 
     @Step("18-Нажать на кнопку New window")
     public void newWindowButtonClick() {
+        Allure.step("18-Нажать на кнопку New window");
         newWindowButton.click();
     }
 
     @Step("19-Закрыть новое окно")
     public void closeNewWindow() {
+        Allure.step("19-Закрыть новое окно");
         String newWindow = "";
         for (String window : driver.getWindowHandles())
             if (!window.equals(currentWindow))

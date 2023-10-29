@@ -1,5 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.example</groupId>
@@ -52,30 +52,30 @@
           <reportDirectory>${project.build.directory}/allure-report</reportDirectory>
         </configuration>
       </plugin>
-<!--      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-clean-plugin</artifactId>
-        <version>3.3.2</version>
-        <executions>
-          <execution>
-            <id>clean-report</id>
-            <phase>pre-site</phase>
-            <goals>
-              <goal>clean</goal>
-            </goals>
-            <configuration>
-              <filesets>
-                <fileset>
-                  <directory>${project.build.directory}/allure-results</directory>
-                </fileset>
-                <fileset>
-                  <directory>${project.build.directory}/allure-report</directory>
-                </fileset>
-              </filesets>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>-->
+      <!--      <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-clean-plugin</artifactId>
+              <version>3.3.2</version>
+              <executions>
+                <execution>
+                  <id>clean-report</id>
+                  <phase>pre-site</phase>
+                  <goals>
+                    <goal>clean</goal>
+                  </goals>
+                  <configuration>
+                    <filesets>
+                      <fileset>
+                        <directory>${project.build.directory}/allure-results</directory>
+                      </fileset>
+                      <fileset>
+                        <directory>${project.build.directory}/allure-report</directory>
+                      </fileset>
+                    </filesets>
+                  </configuration>
+                </execution>
+              </executions>
+            </plugin>-->
       <!--<plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
@@ -100,7 +100,7 @@
     </plugins>
   </build>
 
-<reporting>
+  <reporting>
     <excludeDefaults>true</excludeDefaults>
     <plugins>
       <plugin>
@@ -109,5 +109,5 @@
         <version>2.10.0</version>
       </plugin>
     </plugins>
-</reporting>
+  </reporting>
 </project>
